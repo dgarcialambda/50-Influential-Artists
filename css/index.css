@@ -114,6 +114,23 @@ body {
   width: 95%;
   padding: 3%;
 }
+.title-container h1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5.5rem;
+  text-align: center;
+  color: white;
+}
+.title-container button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  border: ridge 2px;
+}
 .artists-container {
   display: flex;
   justify-content: space-evenly;
