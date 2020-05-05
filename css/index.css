@@ -94,16 +94,47 @@ nav {
 }
 nav a {
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-decoration: none;
+  border-right: solid black 1px;
   color: black;
-  padding: 1%;
+  padding: 3%;
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  nav a {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-right: solid black 1px;
+    color: black;
+    padding: 2%;
+    font-weight: bold;
+  }
+}
+@media (min-width: 800px) {
+  nav a {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-right: solid black 1px;
+    color: black;
+    padding: 3%;
+    font-weight: bold;
+  }
+}
+nav a:nth-child(2) {
+  font-weight: lighter;
+}
+nav a:nth-child(3) {
+  border-right: none;
+  font-weight: lighter;
 }
 body {
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 10%;
+  margin-top: 5% ;
+  margin-bottom: 10% ;
+  margin-left: 10% ;
+  margin-right: 10% ;
 }
 .main-image {
   display: flex;
@@ -116,28 +147,97 @@ body {
 }
 .title-container h1 {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5.5rem;
   text-align: center;
   color: white;
 }
+@media (min-width: 500px) {
+  .title-container h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    text-align: center;
+    color: white;
+  }
+}
+@media (min-width: 800px) {
+  .title-container h1 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5.5rem;
+    text-align: center;
+    color: white;
+  }
+}
 .title-container button {
   position: absolute;
-  top: 90%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
   border: ridge 2px;
   width: 15%;
   height: 5%;
+  background-color: silver;
+  color: black;
+  font-weight: 5%;
+}
+@media (min-width: 500px) {
+  .title-container button {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    text-align: center;
+    color: black;
+    width: 20%;
+  }
+}
+@media (min-width: 800px) {
+  .title-container button {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    border: ridge 2px;
+    width: 15%;
+    height: 5%;
+    background-color: silver;
+    color: black;
+    font-weight: 5%;
+  }
 }
 .artists-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: unset;
+  flex-flow: row;
+  justify-content: last baseline baseline;
+  align-items: baseline;
   margin-left: 10%;
+}
+@media (min-width: 500px) {
+  .artists-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 800px) {
+  .artists-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: last baseline baseline;
+    align-items: baseline;
+  }
 }
 .artists-container .artist,
 .artists-container .bio,
@@ -153,6 +253,18 @@ body {
   font-size: 1.6rem;
   margin-top: 5%;
 }
+@media (min-width: 500px) {
+  .artists-container .artist a {
+    text-align: center;
+  }
+}
+@media (min-width: 800px) {
+  .artists-container .artist a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-top: 5%;
+  }
+}
 .artists-container .artist img {
   border-radius: 5%;
 }
@@ -161,4 +273,18 @@ body {
   font-size: 1rem;
   margin-top: 5%;
   text-align: center;
+}
+@media (min-width: 500px) {
+  .artists-container .artist,
+  .artists-container .bio {
+    text-align: justify;
+  }
+}
+@media (min-width: 800px) {
+  .artists-container .artist,
+  .artists-container .bio {
+    font-size: 1rem;
+    margin-top: 5%;
+    text-align: center;
+  }
 }

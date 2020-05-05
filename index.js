@@ -206,6 +206,7 @@ const artists = [
 /* Task 1: Practice accessing data above by console.log-ing following items:
 
 (1) Name of the first artist in the array
+console.log(artists[0]);
 (2) Bio of the third artist in the array */
 
 
@@ -223,8 +224,10 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    /* code here */
+  
   }
+  
+  
   
   /**
 

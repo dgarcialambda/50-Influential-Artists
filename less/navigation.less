@@ -3,11 +3,26 @@ nav {
     flex-direction: row;
     
     a{
-        display:inline-block;
-        font-size: 1.6rem;
-        text-decoration: none;
-        color: @raven;
-        padding: 1%;
-      
+        .anchors();
+        @media @tablet {
+            display:inline-block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border-right: solid @raven 1px;
+            color: @raven;
+            padding: 2%;
+            font-weight: bold;
+        }
+        @media @desktop {
+            .anchors();
+        }
     }
+    a:nth-child(2) {
+        font-weight: lighter;
+    }
+    a:nth-child(3) {
+        border-right: none;
+        font-weight: lighter;
+    }
+    
 }
