@@ -205,15 +205,17 @@ const artists = [
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
 
-(1) Name of the first artist in the array
-console.log(artists[0]);
-(2) Bio of the third artist in the array */
+(1) Name of the first artist in the array */
+console.log(artists[0].name);
 
-
+/*(2) Bio of the third artist in the array */
+console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
-
+objIndex = artists.findIndex((obj => obj.id == 8));
+console.log(artists[objIndex])
+artists[objIndex].name = "Vincent Van Gogh "
+console.log(artists[objIndex])
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -224,14 +226,11 @@ console.log(artists[0]);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
+    return "The artist at index" + ${[id]} + "is" + ${[name]}
   
   }
   
-  
-  
   /**
-
-
 /* Task 4: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
@@ -240,20 +239,26 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(artists) {
+    let oldArtist = artists.shift();
+    return artists;
   }
   
-  /**
+ removeArtist(artists);
+
+console.log(artists[0]);
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
+function lotsOfArt(artists){
+  let filteredArtists = artists.filter((artists) => {
+    return artists.paintings > 100; 
+  })
+    
 
   }
+  lotsOfArt(filteredArtists);
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -265,15 +270,19 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
-  }
-
-
-
-
+function addArtist(artists){
+    let newArtist = [], b = {
+      id: 21,
+      name: 'Damaris Garcia',
+      years: '1989-Tuesday',
+      genre: 'Web Design',
+      nationality: 'American',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam.'
+    };
+    newArtist.push(b);
+    return newArtist;
+}
+addArtist(artists[21]);
 
 // 🎨🎨 STRETCH 🎨🎨//
 
