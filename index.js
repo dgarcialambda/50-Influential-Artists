@@ -248,14 +248,15 @@ function getArtistByIndex(array, index) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(artists) {
-    let oldArtist = artists.shift();
-    return artists;
+function removeArtist(array, index) {
+  array.splice(index, 1)
+
   }
   
- removeArtist(artists);
+ removeArtist(artists, 0);
+ console.log(artists);
 
-console.log(artists[0]);
+
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
@@ -277,19 +278,19 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(artists){
-    let newArtist = [], b = {
-      id: 21,
-      name: 'Damaris Garcia',
-      years: '1989-Tuesday',
-      genre: 'Web Design',
-      nationality: 'American',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam.'
+function addArtist(id, name, years, genre, nationality, bio){
+    let newArtist = {
+      my_id: id,
+      my_name: name,
+      my_years: years,
+      my_genre: genre,
+      my_nationality: nationality,
+      my_bio: bio
     };
-    newArtist.push(b);
-    return newArtist;
+    artists.push(newArtist);
 }
-addArtist(artists[21]);
+addArtist(22,"Damaris", 1989, "Web Design", "fgtmgmfffmf" );
+console.log(artists);
 
 // 🎨🎨 STRETCH 🎨🎨//
 
