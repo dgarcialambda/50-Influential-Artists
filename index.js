@@ -201,12 +201,19 @@ const artists = [
     }
 ]
 
+
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
+const newArray = []
+for(let index = 0; index < artists.length; index++){
+  newArray.push(artists[index].name)
+  console.log(artists[index].name)
+}
+console.log(newArray)
 
 (1) Name of the first artist in the array */
-console.log(artists[0].name);
+console.log(artists[0]);
 
 /*(2) Bio of the third artist in the array */
 console.log(artists[2].bio);
@@ -225,10 +232,12 @@ console.log(artists[objIndex])
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    return "The artist at index" + ${[id]} + "is" + ${[name]}
+function getArtistByIndex(array, index) {
+    return `The artist at index ${index} ${array[index].name}`;
   
   }
+  console.log(getArtistByIndex(artists,0));
+  console.log(artists[0]);
   
   /**
 /* Task 4: Create a function called `removeArtist` that takes two arguments:
@@ -251,15 +260,13 @@ console.log(artists[0]);
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(artists){
-  let filteredArtists = artists.filter((artists) => {
-    return artists.paintings > 100; 
+function lotsOfArt(array){
+  const lots = array.filter((ele) =>{
+      return ele.paintings > 100;
   })
-    
-
-  }
-  lotsOfArt(filteredArtists);
-
+  return lots;
+}
+console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
